@@ -17,8 +17,8 @@ const addListener = function(event, selector, callback){
 const addListeners = function(){
   const { options, cy } = this;
 
-  const isMultiplySelected = n => n.selected() && cy.elements('node:selected').length > 1;
-  const canBeGrabbed = n => !isParent(n) && !isMultiplySelected(n) && options.grabbedNode(n);
+  const isMultiplySelected = n => n.selected() && cy.elements('.parent-node:selected').length > 1;
+  const canBeGrabbed = n => !isMultiplySelected(n) && options.grabbedNode(n);
   const canBeDropTarget = n => !isChild(n) && !n.same(this.grabbedNode) && options.dropTarget(n, this.grabbedNode);
   const canBeDropSibling = n => isChild(n) && !n.same(this.grabbedNode) && options.dropSibling(n, this.grabbedNode);
   const canPullFromParent = n => isChild(n);
