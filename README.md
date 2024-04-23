@@ -56,6 +56,7 @@ Plain HTML/JS has the extension registered for you automatically, because no `re
 - **Grabbed node** : The grabbed node is the node that is grabbed by the user (by touch or cursor), which starts the drag-and-drop gesture.  There are some requirements on grabbed nodes:
   - A grabbed node may not be a compound parent node.
   - A grabbed node may not be selected if multiple nodes are selected.
+    - You can enable `options.allowMultipleNodeSelection` to allow dragging multiple nodes into a drop target. Note: when enabled creating new parent nodes when dragging into a drop sibling will not work as expected
   - A grabbed node must result in a `true` return value for `options.grabbedNode(node)`.
 - **Drop target** : The drop target node is the parent node currently under consideration by the drag-and-drop gesture.
   - A drop target is a compound parent node.

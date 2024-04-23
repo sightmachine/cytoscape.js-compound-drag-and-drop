@@ -10,5 +10,6 @@ module.exports = {
     includeLabels: true
   },
   overThreshold: 10, // make dragging over a drop target easier by expanding the hit area by this amount on all sides
-  outThreshold: 10 // make dragging out of a drop target a bit harder by expanding the hit area by this amount on all sides
+  outThreshold: 10, // make dragging out of a drop target a bit harder by expanding the hit area by this amount on all sides
+  allowMultipleNodeSelection: false // allow multiple nodes to be grabbed at once, when enabled creating new parent nodes when dragging into a drop sibling will not work as expected
 };
